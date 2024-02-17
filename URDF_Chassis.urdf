@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_Chassis">
+  <link
+    name="Main Body">
+    <inertial>
+      <origin
+        xyz="0.0199308659873677 -0.0253174453137769 0.19128368172556"
+        rpy="0 0 0" />
+      <mass
+        value="8.33219413361641" />
+      <inertia
+        ixx="0.114917685325559"
+        ixy="0.000118931022777511"
+        ixz="-1.7835551958772E-05"
+        iyy="0.0559122727757221"
+        iyz="0.0142106596283717"
+        izz="0.147507082036802" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/Main Body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/Main Body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR_Wheel">
+    <inertial>
+      <origin
+        xyz="0.0182261787468659 -0.0105589120960978 -0.000635568637503581"
+        rpy="0 0 0" />
+      <mass
+        value="0.343435716499611" />
+      <inertia
+        ixx="0.000644214677646356"
+        ixy="-3.52365706057789E-19"
+        ixz="-9.59864141254933E-13"
+        iyy="0.000644214677646352"
+        iyz="9.59865748597077E-13"
+        izz="0.00116837667571466" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/FR_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/FR_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FR"
+    type="prismatic">
+    <origin
+      xyz="0.34434 0.47603 0.056674"
+      rpy="-1.5708 1.3486 1.5708" />
+    <parent
+      link="Main Body" />
+    <child
+      link="FR_Wheel" />
+    <axis
+      xyz="0.86423 -0.50311 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BL_Wheel">
+    <inertial>
+      <origin
+        xyz="0.00415734854295055 -0.00236879896620867 0.0253488804569486"
+        rpy="0 0 0" />
+      <mass
+        value="0.34343571627907" />
+      <inertia
+        ixx="0.000644214677597488"
+        ixy="1.55854062294791E-19"
+        ixz="-9.59864829361762E-13"
+        iyy="0.000644214677597486"
+        iyz="9.59865451379337E-13"
+        izz="0.001168376675661" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/BL_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/BL_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_BL"
+    type="prismatic">
+    <origin
+      xyz="-0.33047 -0.43705 0.18208"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="Main Body" />
+    <child
+      link="BL_Wheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL_Wheel">
+    <inertial>
+      <origin
+        xyz="5.06283903689564E-12 1.26552102130972E-11 0.025348880462663"
+        rpy="0 0 0" />
+      <mass
+        value="0.343435716882085" />
+      <inertia
+        ixx="0.000644214677693701"
+        ixy="5.55653613398821E-19"
+        ixz="-9.59865710266586E-13"
+        iyy="0.000644214677693702"
+        iyz="9.59866326396352E-13"
+        izz="0.00116837667573359" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/FL_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/FL_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FL"
+    type="continuous">
+    <origin
+      xyz="-0.33046 0.49034 0.041224"
+      rpy="1.5708 0.29778 1.5708" />
+    <parent
+      link="Main Body" />
+    <child
+      link="FL_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="BR_Wheel">
+    <inertial>
+      <origin
+        xyz="0.00415734854295075 -0.0023687989662084 -0.000635568633716277"
+        rpy="0 0 0" />
+      <mass
+        value="0.343435716882087" />
+      <inertia
+        ixx="0.000644214677693708"
+        ixy="2.99510850149121E-18"
+        ixz="-9.59865320148698E-13"
+        iyy="0.000644214677693702"
+        iyz="9.59865117156494E-13"
+        izz="0.00116837667573359" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/BR_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Chassis/meshes/BR_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_BR"
+    type="fixed">
+    <origin
+      xyz="0.34739 -0.42873 0.18208"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="Main Body" />
+    <child
+      link="BR_Wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
